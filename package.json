@@ -1,24 +1,30 @@
 {
-  "name": "heroku-cra-node",
+  "name": "currency",
   "version": "1.0.0",
-  "description": "How to use create-react-app with a custom Node API on Heroku",
+  "description": "Currency",
   "engines": {
     "node": "6.11.x"
   },
   "scripts": {
     "start": "node server",
-    "heroku-postbuild": "cd react-ui/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "heroku-postbuild": "cd react-ui/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
+    "watch": "nodemon server.js"
   },
   "cacheDirectories": [
     "node_modules",
     "react-ui/node_modules"
   ],
   "dependencies": {
-    "express": "^4.14.1"
+    "body-parser": "^1.16.1",
+    "colors": "^1.1.2",
+    "errorhandler": "^1.5.0",
+    "express": "^4.14.1",
+    "helmet": "^3.4.0",
+    "restler": "^3.4.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mars/heroku-cra-node.git"
+    "url": "https://github.com/hafbau/currency2.git"
   },
   "keywords": [
     "node",
@@ -27,5 +33,7 @@
     "react"
   ],
   "license": "MIT",
-  "devDependencies": {}
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
 }
